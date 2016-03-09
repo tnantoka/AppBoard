@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B11D4521C907071000D7DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4511C907071000D7DE9 /* AppDelegate.swift */; };
+		9B11D4541C907071000D7DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4531C907071000D7DE9 /* ViewController.swift */; };
+		9B11D4571C907071000D7DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B11D4551C907071000D7DE9 /* Main.storyboard */; };
+		9B11D4591C907071000D7DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B11D4581C907071000D7DE9 /* Assets.xcassets */; };
+		9B11D45C1C907071000D7DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B11D45A1C907071000D7DE9 /* LaunchScreen.storyboard */; };
+		9B11D47B1C907999000D7DE9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4791C907999000D7DE9 /* Realm.framework */; };
+		9B11D47C1C907999000D7DE9 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4791C907999000D7DE9 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B11D47D1C907999000D7DE9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D47A1C907999000D7DE9 /* RealmSwift.framework */; };
+		9B11D47E1C907999000D7DE9 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D47A1C907999000D7DE9 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B11D4831C907A7C000D7DE9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4821C907A7C000D7DE9 /* Board.swift */; };
+		9B11D4851C907A8A000D7DE9 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4841C907A8A000D7DE9 /* App.swift */; };
+		9B11D4891C908070000D7DE9 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4861C908070000D7DE9 /* APIKit.framework */; };
+		9B11D48A1C908070000D7DE9 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4871C908070000D7DE9 /* Himotoki.framework */; };
+		9B11D48B1C908070000D7DE9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4881C908070000D7DE9 /* Result.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B11D47F1C907999000D7DE9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B11D47E1C907999000D7DE9 /* RealmSwift.framework in Embed Frameworks */,
+				9B11D47C1C907999000D7DE9 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9B11D44E1C907071000D7DE9 /* AppBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B11D4511C907071000D7DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B11D4531C907071000D7DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B11D4561C907071000D7DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B11D4581C907071000D7DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B11D45B1C907071000D7DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B11D45D1C907071000D7DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B11D4791C907999000D7DE9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		9B11D47A1C907999000D7DE9 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		9B11D4821C907A7C000D7DE9 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		9B11D4841C907A8A000D7DE9 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		9B11D4861C908070000D7DE9 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		9B11D4871C908070000D7DE9 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
+		9B11D4881C908070000D7DE9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B11D44B1C907071000D7DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B11D47D1C907999000D7DE9 /* RealmSwift.framework in Frameworks */,
+				9B11D47B1C907999000D7DE9 /* Realm.framework in Frameworks */,
+				9B11D4891C908070000D7DE9 /* APIKit.framework in Frameworks */,
+				9B11D48A1C908070000D7DE9 /* Himotoki.framework in Frameworks */,
+				9B11D48B1C908070000D7DE9 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B11D4451C907071000D7DE9 = {
+			isa = PBXGroup;
+			children = (
+				9B11D4861C908070000D7DE9 /* APIKit.framework */,
+				9B11D4871C908070000D7DE9 /* Himotoki.framework */,
+				9B11D4881C908070000D7DE9 /* Result.framework */,
+				9B11D4791C907999000D7DE9 /* Realm.framework */,
+				9B11D47A1C907999000D7DE9 /* RealmSwift.framework */,
+				9B11D4501C907071000D7DE9 /* AppBoard */,
+				9B11D44F1C907071000D7DE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B11D44F1C907071000D7DE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B11D44E1C907071000D7DE9 /* AppBoard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B11D4501C907071000D7DE9 /* AppBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9B11D4811C907A54000D7DE9 /* Models */,
+				9B11D4511C907071000D7DE9 /* AppDelegate.swift */,
+				9B11D4531C907071000D7DE9 /* ViewController.swift */,
+				9B11D4551C907071000D7DE9 /* Main.storyboard */,
+				9B11D4581C907071000D7DE9 /* Assets.xcassets */,
+				9B11D45A1C907071000D7DE9 /* LaunchScreen.storyboard */,
+				9B11D45D1C907071000D7DE9 /* Info.plist */,
+			);
+			path = AppBoard;
+			sourceTree = "<group>";
+		};
+		9B11D4811C907A54000D7DE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B11D4821C907A7C000D7DE9 /* Board.swift */,
+				9B11D4841C907A8A000D7DE9 /* App.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B11D44D1C907071000D7DE9 /* AppBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B11D4601C907071000D7DE9 /* Build configuration list for PBXNativeTarget "AppBoard" */;
+			buildPhases = (
+				9B11D44A1C907071000D7DE9 /* Sources */,
+				9B11D44B1C907071000D7DE9 /* Frameworks */,
+				9B11D44C1C907071000D7DE9 /* Resources */,
+				9B11D47F1C907999000D7DE9 /* Embed Frameworks */,
+				9B11D4801C9079B4000D7DE9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppBoard;
+			productName = AppBoard;
+			productReference = 9B11D44E1C907071000D7DE9 /* AppBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B11D4461C907071000D7DE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Tatsuya Tobioka";
+				TargetAttributes = {
+					9B11D44D1C907071000D7DE9 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 9B11D4491C907071000D7DE9 /* Build configuration list for PBXProject "AppBoard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B11D4451C907071000D7DE9;
+			productRefGroup = 9B11D44F1C907071000D7DE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B11D44D1C907071000D7DE9 /* AppBoard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B11D44C1C907071000D7DE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B11D45C1C907071000D7DE9 /* LaunchScreen.storyboard in Resources */,
+				9B11D4591C907071000D7DE9 /* Assets.xcassets in Resources */,
+				9B11D4571C907071000D7DE9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B11D4801C9079B4000D7DE9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B11D44A1C907071000D7DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B11D4541C907071000D7DE9 /* ViewController.swift in Sources */,
+				9B11D4851C907A8A000D7DE9 /* App.swift in Sources */,
+				9B11D4521C907071000D7DE9 /* AppDelegate.swift in Sources */,
+				9B11D4831C907A7C000D7DE9 /* Board.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B11D4551C907071000D7DE9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B11D4561C907071000D7DE9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B11D45A1C907071000D7DE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B11D45B1C907071000D7DE9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B11D45E1C907071000D7DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B11D45F1C907071000D7DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B11D4611C907071000D7DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AppBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.AppBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B11D4621C907071000D7DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AppBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.AppBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B11D4491C907071000D7DE9 /* Build configuration list for PBXProject "AppBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B11D45E1C907071000D7DE9 /* Debug */,
+				9B11D45F1C907071000D7DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B11D4601C907071000D7DE9 /* Build configuration list for PBXNativeTarget "AppBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B11D4611C907071000D7DE9 /* Debug */,
+				9B11D4621C907071000D7DE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B11D4461C907071000D7DE9 /* Project object */;
+}
