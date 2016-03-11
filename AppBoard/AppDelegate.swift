@@ -13,9 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private lazy var applicationCoordinator: ApplicationCoordinator = {
+        return ApplicationCoordinator(window: self.window!)
+    }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let _ = ViewController().view
+        applicationCoordinator.start()
         return true
     }
 

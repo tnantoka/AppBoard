@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0899A81C92727F003BA34A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0899A71C92727F003BA34A /* Configuration.swift */; };
+		9B0899B21C93713D003BA34A /* AppsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0899B11C93713D003BA34A /* AppsCoordinator.swift */; };
+		9B0899B41C93746F003BA34A /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0899B31C93746F003BA34A /* Collection.swift */; };
 		9B11D4521C907071000D7DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4511C907071000D7DE9 /* AppDelegate.swift */; };
 		9B11D4541C907071000D7DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4531C907071000D7DE9 /* ViewController.swift */; };
 		9B11D4571C907071000D7DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B11D4551C907071000D7DE9 /* Main.storyboard */; };
@@ -21,6 +24,13 @@
 		9B11D4891C908070000D7DE9 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4861C908070000D7DE9 /* APIKit.framework */; };
 		9B11D48A1C908070000D7DE9 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4871C908070000D7DE9 /* Himotoki.framework */; };
 		9B11D48B1C908070000D7DE9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4881C908070000D7DE9 /* Result.framework */; };
+		9B11D48E1C914642000D7DE9 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D48D1C914642000D7DE9 /* ApplicationCoordinator.swift */; };
+		9B11D4901C91465D000D7DE9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D48F1C91465D000D7DE9 /* Coordinator.swift */; };
+		9B11D4941C9148A4000D7DE9 /* BoardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4931C9148A4000D7DE9 /* BoardsCoordinator.swift */; };
+		9B11D4961C914992000D7DE9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4951C914992000D7DE9 /* TableViewController.swift */; };
+		9B11D4981C925149000D7DE9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4971C925149000D7DE9 /* DataSource.swift */; };
+		9B11D49A1C925219000D7DE9 /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4991C925219000D7DE9 /* SourceType.swift */; };
+		9B11D49E1C925630000D7DE9 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D49D1C925630000D7DE9 /* DataType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +49,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B0899A71C92727F003BA34A /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		9B0899B11C93713D003BA34A /* AppsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsCoordinator.swift; sourceTree = "<group>"; };
+		9B0899B31C93746F003BA34A /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		9B11D44E1C907071000D7DE9 /* AppBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B11D4511C907071000D7DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B11D4531C907071000D7DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +66,13 @@
 		9B11D4861C908070000D7DE9 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		9B11D4871C908070000D7DE9 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		9B11D4881C908070000D7DE9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		9B11D48D1C914642000D7DE9 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		9B11D48F1C91465D000D7DE9 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9B11D4931C9148A4000D7DE9 /* BoardsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardsCoordinator.swift; sourceTree = "<group>"; };
+		9B11D4951C914992000D7DE9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9B11D4971C925149000D7DE9 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		9B11D4991C925219000D7DE9 /* SourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
+		9B11D49D1C925630000D7DE9 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +115,9 @@
 		9B11D4501C907071000D7DE9 /* AppBoard */ = {
 			isa = PBXGroup;
 			children = (
+				9B11D48C1C914618000D7DE9 /* Coordinators */,
+				9B11D4911C91475A000D7DE9 /* Controllers */,
+				9B11D4921C914833000D7DE9 /* DataSources */,
 				9B11D4811C907A54000D7DE9 /* Models */,
 				9B11D4511C907071000D7DE9 /* AppDelegate.swift */,
 				9B11D4531C907071000D7DE9 /* ViewController.swift */,
@@ -109,10 +132,41 @@
 		9B11D4811C907A54000D7DE9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9B0899B31C93746F003BA34A /* Collection.swift */,
 				9B11D4821C907A7C000D7DE9 /* Board.swift */,
 				9B11D4841C907A8A000D7DE9 /* App.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9B11D48C1C914618000D7DE9 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9B11D48F1C91465D000D7DE9 /* Coordinator.swift */,
+				9B11D48D1C914642000D7DE9 /* ApplicationCoordinator.swift */,
+				9B11D4931C9148A4000D7DE9 /* BoardsCoordinator.swift */,
+				9B0899B11C93713D003BA34A /* AppsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9B11D4911C91475A000D7DE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B11D4951C914992000D7DE9 /* TableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9B11D4921C914833000D7DE9 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				9B11D4991C925219000D7DE9 /* SourceType.swift */,
+				9B11D4971C925149000D7DE9 /* DataSource.swift */,
+				9B11D49D1C925630000D7DE9 /* DataType.swift */,
+				9B0899A71C92727F003BA34A /* Configuration.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,10 +263,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0899A81C92727F003BA34A /* Configuration.swift in Sources */,
+				9B11D48E1C914642000D7DE9 /* ApplicationCoordinator.swift in Sources */,
 				9B11D4541C907071000D7DE9 /* ViewController.swift in Sources */,
+				9B11D4941C9148A4000D7DE9 /* BoardsCoordinator.swift in Sources */,
+				9B11D4981C925149000D7DE9 /* DataSource.swift in Sources */,
+				9B0899B41C93746F003BA34A /* Collection.swift in Sources */,
+				9B11D4901C91465D000D7DE9 /* Coordinator.swift in Sources */,
 				9B11D4851C907A8A000D7DE9 /* App.swift in Sources */,
+				9B11D49A1C925219000D7DE9 /* SourceType.swift in Sources */,
 				9B11D4521C907071000D7DE9 /* AppDelegate.swift in Sources */,
+				9B11D49E1C925630000D7DE9 /* DataType.swift in Sources */,
 				9B11D4831C907A7C000D7DE9 /* Board.swift in Sources */,
+				9B11D4961C914992000D7DE9 /* TableViewController.swift in Sources */,
+				9B0899B21C93713D003BA34A /* AppsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -312,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

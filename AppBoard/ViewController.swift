@@ -15,10 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+                
         let realm = try! Realm()
         let board = Board()
         board.name = "test"
+
+        let board2 = Board()
+        board2.name = "test2"
 
         let app1 = App()
         app1.name = "App 1"
@@ -31,13 +34,14 @@ class ViewController: UIViewController {
         try! realm.write {
             realm.deleteAll()
             realm.add(board)
+            realm.add(board2)
             realm.add(app1)
             realm.add(app2)
         }
         
-        let board2 = realm.objects(Board.self).first!
-        print(board2)
-        print(board2.apps)
+        let board1 = realm.objects(Board.self).first!
+        print(board1)
+        print(board1.apps)
         
         print(realm.objects(Board).count)
         print(realm.objects(App).count)

@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Board: Object {
+class Board: Object {    
     dynamic var name = ""
     dynamic var updatedAt = NSDate()
     
