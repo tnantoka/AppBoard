@@ -30,10 +30,35 @@ struct BoardsCoordinator: Coordinator {
                 appsCoordinator.start()
             },
             addItem: { tableView, dataSource in
-                let board = Board()
-                board.name = "taatt"
-                account.addNewItem(board)
-                dataSource.insertTopRowIn(tableView)
+                let alertController = UIAlertController(
+                    title: NSLocalizedString("Add New Board", comment: ""),
+                    message: nil,
+                    preferredStyle: .Alert
+                )
+                alertController.addTextFieldWithConfigurationHandler { textField in
+                    textField.placeholder = NSLocalizedString("Name", comment: "")
+                }
+                alertController.addAction(
+                    UIAlertAction(
+                        title: NSLocalizedString("Add", comment: ""),
+                        style: .Default,
+                        handler: { _ in
+                            guard let text = alertController.textFields?.first?.text where !text.isEmpty else { return }
+                            let board = Board()
+                            board.name = text
+                            account.addNewItem(board)
+                            dataSource.insertTopRowIn(tableView)
+                        }
+                    )
+                )
+                alertController.addAction(
+                    UIAlertAction(
+                        title: NSLocalizedString("Cancel", comment: ""),
+                        style: .Cancel,
+                        handler: nil
+                    )
+                )
+                presenter.presentViewController(alertController, animated: true, completion: nil)
             }
         )
         self.listViewController = TableViewController(configuration: configuration)
