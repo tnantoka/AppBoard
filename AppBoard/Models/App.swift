@@ -14,5 +14,7 @@ class App: Object {
     dynamic var releasedAt = NSDate()
     dynamic var icon = ""
     
-    dynamic var board: Board?
+    var board: Board {
+        return linkingObjects(Board.self, forProperty: "apps").first!
+    }
 }

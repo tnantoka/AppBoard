@@ -12,34 +12,32 @@ class BoardsCoordinator: Coordinator {
     
     let presenter: UINavigationController
     
-    let appsCoordinator: AppsCoordinator
-
-    private let listViewController: TableViewController<Board>
+    private let listViewController: TableViewController<Account>
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
         
-        let appsCoordinator = AppsCoordinator(presenter: presenter)
-        self.appsCoordinator = appsCoordinator
-        
-        let configuration = Configuration<Board>(
+        let account = Account()
+        let configuration = Configuration(
+            dataObject: account,
             cellStyle: .Default,
+            editable: true,
             configureCell: { cell, board in
                 cell.textLabel?.text = board.name
             },
             selectItem: { board in
-                print(board)
+                let appsCoordinator = AppsCoordinator(presenter: presenter, board: board)
                 appsCoordinator.start()
             },
             addItem: { tableView, dataSource in
                 let board = Board()
                 board.name = "taatt"
-                Board.addNewItem(board)
+                account.addNewItem(board)
                 dataSource.insertTopRowIn(tableView)
             }
         )
         self.listViewController = TableViewController(configuration: configuration)
-        
+        listViewController.title = NSLocalizedString("Boards", comment: "")
     }
     
     func start() {

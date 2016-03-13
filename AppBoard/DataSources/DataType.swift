@@ -7,60 +7,31 @@
 //
 
 import Foundation
-import RealmSwift
 
 protocol DataType {
     typealias ItemType
     
-    static func all() -> [ItemType]
-    static func numberOfItems() -> Int
-    static func itemAtPosition(position: Int) -> ItemType
-    static func addNewItem(item: ItemType)
-    static func deleteItemAtIndex(index: Int)
+    var all: [ItemType] { get }
+    var numberOfItems: Int { get }
+    
+    func itemAtPosition(position: Int) -> ItemType
+    func addNewItem(item: ItemType)
+    func deleteItemAtIndex(index: Int)
 }
 
-extension DataType where ItemType: Object {
-    static func numberOfItems() -> Int {
+extension DataType {
+    var numberOfItems: Int {
         return all.count
     }
     
-    static func itemAtPosition(position: Int) -> ItemType {
+    func itemAtPosition(position: Int) -> ItemType {
         return all[position]
     }
     
-    static func addNewItem(item: ItemType) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(item)
-        }
+    func addNewItem(item: ItemType) {
     }
     
-    static func deleteItemAtIndex(index: Int) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.delete(itemAtPosition(index))
-        }
-    }
-    
-    static var all: [ItemType] {
-        return all()
+    func deleteItemAtIndex(index: Int) {
     }
 }
 
-extension Board: DataType {
-    typealias ItemType = Board
-    
-    static func all() -> [ItemType] {
-        let realm = try! Realm()
-        return realm.objects(ItemType).sorted("updatedAt", ascending: false).map { $0 }
-    }
-}
-
-extension App: DataType {
-    typealias ItemType = App
-    
-    static func all() -> [ItemType] {
-        let realm = try! Realm()
-        return realm.objects(ItemType).sorted("releasedAt", ascending: false).map { $0 }
-    }
-}

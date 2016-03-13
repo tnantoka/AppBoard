@@ -13,7 +13,13 @@ class Board: Object {
     dynamic var name = ""
     dynamic var updatedAt = NSDate()
     
-    var apps: [App] {
-        return linkingObjects(App.self, forProperty: "board")
+    let apps = List<App>()
+}
+
+extension Board: DataType {
+    typealias ItemType = App
+    
+    var all: [ItemType] {
+        return self.apps.sorted("releasedAt", ascending: false).map { $0 }
     }
 }

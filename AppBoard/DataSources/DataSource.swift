@@ -12,9 +12,14 @@ import RealmSwift
 class DataSource<Data: DataType>: NSObject, SourceType {
 
     let reuseIdentifier = "reuseIdentifier"
+    let dataObject: Data
+    
+    init(dataObject: Data) {
+        self.dataObject = dataObject
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Data.numberOfItems()
+        return dataObject.numberOfItems
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -23,7 +28,7 @@ class DataSource<Data: DataType>: NSObject, SourceType {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            Data.deleteItemAtIndex(indexPath.row)
+            dataObject.deleteItemAtIndex(indexPath.row)
             deleteRowAtIndexPath(indexPath, from: tableView)
         }
     }

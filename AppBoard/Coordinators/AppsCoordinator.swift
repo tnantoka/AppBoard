@@ -12,13 +12,18 @@ class AppsCoordinator: Coordinator {
     
     let presenter: UINavigationController
     
-    private let listViewController: TableViewController<App>
+    private let listViewController: TableViewController<Board>
     
-    init(presenter: UINavigationController) {
+    let board: Board
+    
+    init(presenter: UINavigationController, board: Board) {
         self.presenter = presenter
+        self.board = board
         
-        let configuration = Configuration<App>(
+        let configuration = Configuration(
+            dataObject: board,
             cellStyle: .Default,
+            editable: true,
             configureCell: { cell, app in
                 cell.textLabel?.text = app.name
             },
@@ -26,13 +31,17 @@ class AppsCoordinator: Coordinator {
                 print(app)
             },
             addItem: { tableView, dataSource in
-                let app = App()
-                app.name = "taatt"
-                App.addNewItem(app)
-                dataSource.insertTopRowIn(tableView)
+//                let app = App()
+//                app.name = "taatt"
+//                board.addNewItem(app)
+//                dataSource.insertTopRowIn(tableView)
+                
+                let searchCoordinator = SearchCoordinator(presenter: presenter)
+                searchCoordinator.start()	
             }
         )
         self.listViewController = TableViewController(configuration: configuration)
+        listViewController.title = board.name
     }
     
     func start() {

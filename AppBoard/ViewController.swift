@@ -9,6 +9,7 @@
 import UIKit
 
 import RealmSwift
+import APIKit
 
 class ViewController: UIViewController {
 
@@ -25,11 +26,11 @@ class ViewController: UIViewController {
 
         let app1 = App()
         app1.name = "App 1"
-        app1.board = board
+        board.apps.append(app1)
 
         let app2 = App()
         app2.name = "App 2"
-        app2.board = board
+        board.apps.append(app2)
 
         try! realm.write {
             realm.deleteAll()
@@ -45,6 +46,20 @@ class ViewController: UIViewController {
         
         print(realm.objects(Board).count)
         print(realm.objects(App).count)
+        
+        let request = ITunesAPI.SearchSoftwaresRequest(query: "JavaScript Anywhere").requestWithPage(1)
+        Session.sendRequest(request) { result in
+            switch result {
+            case .Success(let response):
+                print(response.elements.count)
+                print(response.elements.first!.name)
+                print(response.elements.first!.description)
+                print(response.elements.first!.icon)
+                print(response.elements.first!.url)
+            case .Failure(let error):
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
