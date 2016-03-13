@@ -8,13 +8,16 @@
 
 import Foundation
 import RealmSwift
+import Himotoki
 
 class App: Object {
     dynamic var name = ""
-    dynamic var releasedAt = NSDate()
+    dynamic var desc = ""
     dynamic var icon = ""
-    
+    dynamic var url = ""
+    dynamic var releasedAt = NSDate()
+
     var board: Board {
         return linkingObjects(Board.self, forProperty: "apps").first!
-    }
+    }    
 }

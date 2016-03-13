@@ -23,11 +23,13 @@ struct SearchCoordinator: Coordinator {
             dataObject: search,
             cellStyle: .Default,
             editable: true,
-            configureCell: { cell, app in
-                cell.textLabel?.text = app.name
+            configureCell: { cell, software in
+                cell.textLabel?.text = software.name
+                cell.imageView?.image = software.thumbnail
             },
-            selectItem: { app in
-                print(app)
+            selectItem: { software in
+//                let appCoordinator = AppCoordinator(presenter: presenter, app: software.app)
+//                appCoordinator.start()
             },
             searchItems: { query, tableView, dataSource in
                 let request = ITunesAPI.SearchSoftwaresRequest(query: query).requestWithPage(1)

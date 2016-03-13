@@ -35,6 +35,7 @@ extension ITunesAPI {
                 "entity": "software",
                 "lang": lang,
                 "country": country,
+                "limit": 20,
                 "term": query
             ]
         }

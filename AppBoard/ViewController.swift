@@ -54,8 +54,9 @@ class ViewController: UIViewController {
                 print(response.elements.count)
                 print(response.elements.first!.name)
                 print(response.elements.first!.description)
-                print(response.elements.first!.icon)
-                print(response.elements.first!.url)
+                print(response.elements.first!.iconURL)
+                print(response.elements.first!.viewURL)
+                print(response.elements.first!.releaseDate)
             case .Failure(let error):
                 print(error)
             }

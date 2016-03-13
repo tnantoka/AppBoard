@@ -28,14 +28,10 @@ struct AppsCoordinator: Coordinator {
                 cell.textLabel?.text = app.name
             },
             selectItem: { app in
-                print(app)
+                let appCoordinator = AppCoordinator(presenter: presenter, app: app)
+                appCoordinator.start()
             },
             addItem: { tableView, dataSource in
-//                let app = App()
-//                app.name = "taatt"
-//                board.addNewItem(app)
-//                dataSource.insertTopRowIn(tableView)
-                
                 let searchCoordinator = SearchCoordinator(presenter: presenter)
                 searchCoordinator.start()	
             }
