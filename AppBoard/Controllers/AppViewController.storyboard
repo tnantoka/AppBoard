@@ -62,6 +62,9 @@
                                             <constraint firstAttribute="width" secondItem="cVX-7O-jcI" secondAttribute="height" multiplier="1:1" id="VeM-jy-iQk"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="urlButtonDidTap:" destination="6If-oW-JjO" eventType="touchUpInside" id="E4T-5w-0S4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

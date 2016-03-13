@@ -49,15 +49,30 @@ class AppViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func urlButtonDidTap(sender: AnyObject) {
+        guard let url = NSURL(string: app.url) else { return }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let alertController = UIAlertController(
+            title: NSLocalizedString("Open in Safari", comment: ""),
+            message: app.url,
+            preferredStyle: .Alert
+        )
+        alertController.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Open", comment: ""),
+                style: .Default,
+                handler: { _ in
+                    UIApplication.sharedApplication().openURL(url)
+                }
+            )
+        )
+        alertController.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Cancel", comment: ""),
+                style: .Cancel,
+                handler: nil
+            )
+        )
+        presentViewController(alertController, animated: true, completion: nil)
     }
-    */
-
 }
