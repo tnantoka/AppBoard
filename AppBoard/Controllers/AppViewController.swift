@@ -22,6 +22,8 @@ class AppViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = app.name
+        
         if let iconURL = NSURL(string: app.icon), data = NSData(contentsOfURL: iconURL) {
                 iconView.image = UIImage(data: data)
         }
@@ -29,8 +31,17 @@ class AppViewController: UIViewController {
         releasedLabel.text = app.releasedAt.description
         descView.text = app.desc        
         
-//        NSData(contentsOfURL: app)
-//        iconView.image = UIImage(data:)
+        let filter = CIFilter(
+            name: "CIQRCodeGenerator",
+            withInputParameters: [
+                "inputMessage": app.url.dataUsingEncoding(NSUTF8StringEncoding)!,
+                "inputCorrectionLevel": "H",
+            ]
+        )
+        let transform = CGAffineTransformMakeScale(8.0, 8.0)
+        let ciImage = filter!.outputImage!.imageByApplyingTransform(transform)
+        let qrImage = UIImage(CIImage: ciImage)
+        urlButton.setImage(qrImage, forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {
