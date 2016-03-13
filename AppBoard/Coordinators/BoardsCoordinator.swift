@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BoardsCoordinator: Coordinator {
+struct BoardsCoordinator: Coordinator {
     
     let presenter: UINavigationController
     

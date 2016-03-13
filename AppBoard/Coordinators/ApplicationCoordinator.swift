@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ApplicationCoordinator: Coordinator {
+struct ApplicationCoordinator: Coordinator {
     
     let window: UIWindow
     let rootViewController = UINavigationController()

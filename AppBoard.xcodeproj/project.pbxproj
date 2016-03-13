@@ -42,6 +42,7 @@
 		9B11D4981C925149000D7DE9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4971C925149000D7DE9 /* DataSource.swift */; };
 		9B11D49A1C925219000D7DE9 /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4991C925219000D7DE9 /* SourceType.swift */; };
 		9B11D49E1C925630000D7DE9 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D49D1C925630000D7DE9 /* DataType.swift */; };
+		9BEF7A5B1C95AAC60090594C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7A5A1C95AAC60090594C /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,6 +96,7 @@
 		9B11D4971C925149000D7DE9 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		9B11D4991C925219000D7DE9 /* SourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		9B11D49D1C925630000D7DE9 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		9BEF7A5A1C95AAC60090594C /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				9B0899B51C9379A1003BA34A /* Object.swift */,
 				9B0899B91C94BF5D003BA34A /* Software.swift */,
 				9B0899C81C952141003BA34A /* Search.swift */,
+				9BEF7A5A1C95AAC60090594C /* APIError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				9B0899C91C952141003BA34A /* Search.swift in Sources */,
 				9B11D4961C914992000D7DE9 /* TableViewController.swift in Sources */,
 				9B0899B21C93713D003BA34A /* AppsCoordinator.swift in Sources */,
+				9BEF7A5B1C95AAC60090594C /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

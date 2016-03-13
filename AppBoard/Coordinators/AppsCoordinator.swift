@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppsCoordinator: Coordinator {
+struct AppsCoordinator: Coordinator {
     
     let presenter: UINavigationController
     

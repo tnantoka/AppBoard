@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ErrorCoordinator: Coordinator {
-    
+struct ErrorCoordinator: Coordinator {
     let presenter: UINavigationController
     let error: String
     

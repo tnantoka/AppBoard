@@ -9,7 +9,7 @@
 import UIKit
 import APIKit
 
-class SearchCoordinator: Coordinator {
+struct SearchCoordinator: Coordinator {
     
     let presenter: UINavigationController
     
@@ -37,7 +37,7 @@ class SearchCoordinator: Coordinator {
                         search.results = response.elements
                         tableView.reloadData()
                     case .Failure(let error):
-                        let errorCoordinator = ErrorCoordinator(presenter: presenter, error: "\(error._code)")
+                        let errorCoordinator = ErrorCoordinator(presenter: presenter, error: error.localizedDescription)
                         errorCoordinator.start()
                     }
                 }
