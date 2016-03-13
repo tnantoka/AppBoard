@@ -210,8 +210,8 @@
 			children = (
 				9B11D4991C925219000D7DE9 /* SourceType.swift */,
 				9B11D4971C925149000D7DE9 /* DataSource.swift */,
-				9B11D49D1C925630000D7DE9 /* DataType.swift */,
 				9B0899A71C92727F003BA34A /* Configuration.swift */,
+				9B11D49D1C925630000D7DE9 /* DataType.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
