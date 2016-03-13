@@ -56,7 +56,7 @@ class Configuration<Data: DataType>: DataSource<Data>, UITableViewDelegate {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier)
-            ?? UITableViewCell(style: .Default, reuseIdentifier: reuseIdentifier)
+            ?? UITableViewCell(style: cellStyle, reuseIdentifier: reuseIdentifier)
         
         let item = dataObject.itemAtPosition(indexPath.row)
         configureCell(cell: cell, item: item)

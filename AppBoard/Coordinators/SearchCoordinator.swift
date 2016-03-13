@@ -15,7 +15,7 @@ struct SearchCoordinator: Coordinator {
     
     private let listViewController: TableViewController<Search>
     
-    init(presenter: UINavigationController) {
+    init(presenter: UINavigationController, didSelect: App -> Void) {
         self.presenter = presenter
         
         let search = Search()
@@ -30,6 +30,7 @@ struct SearchCoordinator: Coordinator {
             selectItem: { software in
 //                let appCoordinator = AppCoordinator(presenter: presenter, app: software.app)
 //                appCoordinator.start()
+                didSelect(software.app)
             },
             searchItems: { query, tableView, dataSource in
                 let request = ITunesAPI.SearchSoftwaresRequest(query: query).requestWithPage(1)

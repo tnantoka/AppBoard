@@ -22,4 +22,11 @@ extension Board: DataType {
     var all: [ItemType] {
         return self.apps.sorted("releasedAt", ascending: false).map { $0 }
     }
+    
+    func addNewItem(item: ItemType) {
+        let realm = try! Realm()
+        try! realm.write {
+            apps.append(item)
+        }
+    }
 }

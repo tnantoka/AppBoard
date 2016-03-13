@@ -23,7 +23,7 @@ struct Software: Decodable {
             description: e.value("description"),
             iconURL: e.valueOptional("artworkUrl512").flatMap { NSURL(string: $0) },
             viewURL: e.valueOptional("trackViewUrl").flatMap { NSURL(string: $0) },
-            releaseDate: e.valueOptional("trackViewUrl").flatMap { parseDate($0) },
+            releaseDate: e.valueOptional("releaseDate").flatMap { parseDate($0) },
             thumbnail: e.valueOptional("artworkUrl60").flatMap { NSURL(string: $0) }.flatMap { NSData(contentsOfURL: $0) }.flatMap { UIImage(data: $0) }
         )
     }

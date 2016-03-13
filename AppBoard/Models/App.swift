@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import Himotoki
+import UIKit
 
 class App: Object {
     dynamic var name = ""
@@ -19,5 +20,13 @@ class App: Object {
 
     var board: Board {
         return linkingObjects(Board.self, forProperty: "apps").first!
-    }    
+    }
+    
+    lazy var iconImage: UIImage? = {
+        return NSURL(string: self.icon).flatMap { NSData(contentsOfURL: $0) }.flatMap { UIImage(data: $0) }
+    }()
+    
+    override class func ignoredProperties() -> [String] {
+        return ["iconImage"]
+    }
 }

@@ -44,13 +44,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PfC-n7-2X3">
-                                <rect key="frame" x="20" y="185" width="335" height="160"/>
+                                <rect key="frame" x="15" y="185" width="345" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="pYf-QJ-TGC"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChI-GK-5Rt">
@@ -80,14 +80,14 @@
                             <constraint firstItem="ChI-GK-5Rt" firstAttribute="leading" secondItem="oP1-6q-p0h" secondAttribute="leading" constant="20" id="BHQ-mi-jHh"/>
                             <constraint firstAttribute="trailing" secondItem="eX9-9c-nBf" secondAttribute="trailing" constant="20" id="Dcl-Ur-bSd"/>
                             <constraint firstAttribute="trailing" secondItem="YqH-uM-6SC" secondAttribute="trailing" constant="20" id="Gsm-ct-523"/>
-                            <constraint firstItem="PfC-n7-2X3" firstAttribute="leading" secondItem="oP1-6q-p0h" secondAttribute="leading" constant="20" id="JBv-vz-iL6"/>
+                            <constraint firstItem="PfC-n7-2X3" firstAttribute="leading" secondItem="oP1-6q-p0h" secondAttribute="leading" constant="15" id="JBv-vz-iL6"/>
                             <constraint firstItem="eX9-9c-nBf" firstAttribute="leading" secondItem="oP1-6q-p0h" secondAttribute="leading" constant="20" id="JQZ-UQ-a2V"/>
                             <constraint firstItem="ChI-GK-5Rt" firstAttribute="top" secondItem="PfC-n7-2X3" secondAttribute="bottom" constant="8" id="ZQ9-Cn-C7p"/>
                             <constraint firstItem="YqH-uM-6SC" firstAttribute="top" secondItem="tbj-XS-qvC" secondAttribute="bottom" constant="20" id="cGZ-4L-X6R"/>
                             <constraint firstItem="PfC-n7-2X3" firstAttribute="top" secondItem="eX9-9c-nBf" secondAttribute="bottom" constant="8" id="fuy-YA-B9I"/>
                             <constraint firstItem="h1L-xw-hkr" firstAttribute="leading" secondItem="oP1-6q-p0h" secondAttribute="leading" constant="20" id="jYe-os-fdP"/>
                             <constraint firstItem="h1L-xw-hkr" firstAttribute="top" secondItem="tbj-XS-qvC" secondAttribute="bottom" constant="20" id="kUO-1J-e3z"/>
-                            <constraint firstAttribute="trailing" secondItem="PfC-n7-2X3" secondAttribute="trailing" constant="20" id="qkJ-iK-RGU"/>
+                            <constraint firstAttribute="trailing" secondItem="PfC-n7-2X3" secondAttribute="trailing" constant="15" id="qkJ-iK-RGU"/>
                             <constraint firstAttribute="trailing" secondItem="ChI-GK-5Rt" secondAttribute="trailing" constant="20" id="zdI-aM-33e"/>
                         </constraints>
                     </view>

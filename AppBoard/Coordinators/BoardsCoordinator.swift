@@ -20,10 +20,11 @@ struct BoardsCoordinator: Coordinator {
         let account = Account()
         let configuration = Configuration(
             dataObject: account,
-            cellStyle: .Default,
+            cellStyle: .Value1,
             editable: true,
             configureCell: { cell, board in
                 cell.textLabel?.text = board.name
+                cell.detailTextLabel?.text = "\(board.apps.count)"
             },
             selectItem: { board in
                 let appsCoordinator = AppsCoordinator(presenter: presenter, board: board)

@@ -22,18 +22,45 @@ struct AppsCoordinator: Coordinator {
         
         let configuration = Configuration(
             dataObject: board,
-            cellStyle: .Default,
+            cellStyle: .Subtitle,
             editable: true,
             configureCell: { cell, app in
                 cell.textLabel?.text = app.name
+                cell.detailTextLabel?.text = app.releasedAt.description
+                cell.imageView?.image = app.iconImage
             },
             selectItem: { app in
                 let appCoordinator = AppCoordinator(presenter: presenter, app: app)
                 appCoordinator.start()
             },
             addItem: { tableView, dataSource in
-                let searchCoordinator = SearchCoordinator(presenter: presenter)
-                searchCoordinator.start()	
+                let searchCoordinator = SearchCoordinator(presenter: presenter, didSelect: { app in
+                    let alertController = UIAlertController(
+                        title: NSLocalizedString("Add to Board", comment: ""),
+                        message: app.name,
+                        preferredStyle: .Alert
+                    )
+                    alertController.addAction(
+                        UIAlertAction(
+                            title: NSLocalizedString("Add", comment: ""),
+                            style: .Default,
+                            handler: { _ in
+                                board.addNewItem(app)
+                                presenter.popViewControllerAnimated(true)
+                                tableView.reloadData()
+                            }
+                        )
+                    )
+                    alertController.addAction(
+                        UIAlertAction(
+                            title: NSLocalizedString("Cancel", comment: ""),
+                            style: .Cancel,
+                            handler: nil
+                        )
+                    )
+                    presenter.presentViewController(alertController, animated: true, completion: nil)
+                })
+                searchCoordinator.start()
             }
         )
         self.listViewController = TableViewController(configuration: configuration)
