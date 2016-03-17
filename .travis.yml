@@ -7,6 +7,6 @@ matrix:
 before_install:
   - brew update
   - brew upgrade carthage
-  - carthage bootstrap --platform iOS
+  - carthage bootstrap --platform iOS --no-use-binaries
 script:
   - set -o pipefail && xcodebuild test -project AppBoard.xcodeproj -scheme AppBoard -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=$IOS_VERSION" ONLY_ACTIVE_ARCH=NO | xcpretty
