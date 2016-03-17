@@ -10,7 +10,7 @@ A open source portfolio app for iOS developers.
 ```
 $ git clone git@github.com:tnantoka/AppBoard.git
 $ cd AppBoard
-$ carthage update
+$ carthage bootstrap
 $ open AppBoard.xcodeproj/
 ```
 

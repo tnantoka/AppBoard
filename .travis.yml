@@ -6,5 +6,9 @@ matrix:
       env: IOS_VERSION=9.2
     - os: osx
       env: IOS_VERSION=8.4
+before_install:
+  - brew update
+  - brew upgrade carthage
+  - carthage bootstrap
 script:
   - set -o pipefail && xcodebuild test -project AppBoard.xcodeproj -scheme AppBoard -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=$IOS_VERSION" ONLY_ACTIVE_ARCH=NO | xcpretty
