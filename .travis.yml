@@ -2,8 +2,8 @@ language: objective-c
 osx_image: xcode7.2
 matrix:
   include:
-    - env: IOS=iPhone 6s,OS=9.2
-    - env: IOS=iPhone 6,OS=8.4
+    - env: IOS="iPhone 6s,OS=9.2"
+    - env: IOS="iPhone 6,OS=8.4"
 before_install:
   - carthage bootstrap --platform iOS --no-use-binaries
 script:
