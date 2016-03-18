@@ -15,20 +15,6 @@ struct Account {
 extension Account: DataType {
     typealias ItemType = Board
 
-    func addNewItem(item: ItemType) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(item)
-        }
-    }
-    
-    func deleteItemAtIndex(index: Int) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.delete(itemAtPosition(index))
-        }
-    }
-
     var all: [ItemType] {
         let realm = try! Realm()
         return realm.objects(ItemType).sorted("updatedAt", ascending: false).map { $0 }

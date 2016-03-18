@@ -1,15 +1,15 @@
 //
-//  BoardTests.swift
+//  AccountTests.swift
 //  AppBoard
 //
-//  Created by Tatsuya Tobioka on 3/17/16.
+//  Created by Tatsuya Tobioka on 3/18/16.
 //  Copyright © 2016 Tatsuya Tobioka. All rights reserved.
 //
 
 import XCTest
 @testable import AppBoard
 
-class BoardTests: XCTestCase {
+class AccountTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,18 +33,14 @@ class BoardTests: XCTestCase {
         }
     }
     
-    func testApps() {
+    func testAll() {
         let account = Account()
         let board = Board()
-        let app = App()
-        let name = "App Name"
-        app.name = name
+        let name = "Board Name"
+        let count = account.all.count + 1
+        board.name = name
         account.addNewItem(board)
-        board.addNewItem(app)
-        XCTAssertEqual(board.apps.count, 1)
-        XCTAssertEqual(board.all.first?.name, name)
-        
-        board.deleteItemAtIndex(0)
-        XCTAssertEqual(board.apps.count, 0)
+        XCTAssertEqual(account.all.count, count)
+        XCTAssertEqual(account.all.first?.name, name)
     }
 }

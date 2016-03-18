@@ -9,7 +9,7 @@
 import XCTest
 
 class AppBoardUITests: XCTestCase {
-        
+
     override func setUp() {
         super.setUp()
         
@@ -33,19 +33,61 @@ class AppBoardUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testCreateBoard() {
+    func testCreateAndDeleteBoard() {
         let app = XCUIApplication()
-        let name = "Board Name"
         let count = app.cells.count + 1
+        let boardName = self.boardName
         
+        let cell = createBoard(app, name: boardName)
+        
+        XCTAssertEqual(app.cells.count, count)
+        XCTAssert(cell.exists)
+        
+        cell.swipeLeft()
+        app.cells.buttons["Delete"].tap()
+        
+        XCTAssertEqual(app.cells.count, count - 1)
+    }
+    
+    func testAddApp() {
+        let app = XCUIApplication()
+        let boardName = self.boardName
+        
+        let cell = createBoard(app, name: boardName)
+        
+        cell.tap()
+        
+        createApp(app)
+
+        app.cells.staticTexts[appName].tap()
+        XCTAssert(app.navigationBars.staticTexts[appName].exists)
+    }
+    
+    private func createBoard(app: XCUIApplication, name: String) -> XCUIElement {
         app.navigationBars.buttons["Add"].tap()
         
         let alert = app.alerts["Add New Board"]
         alert.textFields.elementBoundByIndex(0).typeText(name)
         alert.buttons["Add"].tap()
-
-        XCTAssertEqual(app.cells.count, count)
-        let cell = app.cells.staticTexts[name]
-        XCTAssert(cell.exists)
+        
+        return app.cells.staticTexts[name]
     }
+    
+    private func createApp(app: XCUIApplication) {
+        app.navigationBars.buttons["Add"].tap()
+        
+        app.typeText(appName)
+        app.buttons["Search"].tap()
+
+        app.cells.staticTexts[appName].tap()
+
+        let alert = app.alerts["Add to Board"]
+        alert.buttons["Add"].tap()
+    }
+    
+    private var boardName: String {
+        return "Board Name \(NSDate().description)"
+    }
+    
+    private let appName = "TimeCrowd"
 }
