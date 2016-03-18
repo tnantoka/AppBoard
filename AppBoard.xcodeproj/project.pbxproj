@@ -52,6 +52,7 @@
 		9BEF7A851C9A7BCB0090594C /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D47A1C907999000D7DE9 /* RealmSwift.framework */; };
 		9BEF7A861C9A7BCB0090594C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B11D4881C908070000D7DE9 /* Result.framework */; };
 		9BEF7A931C9A7D340090594C /* AppBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7A921C9A7D340090594C /* AppBoardUITests.swift */; };
+		9BEF7AA01C9BB1890090594C /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7A9F1C9BB1890090594C /* AccountTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		9BEF7A901C9A7D340090594C /* AppBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEF7A921C9A7D340090594C /* AppBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBoardUITests.swift; sourceTree = "<group>"; };
 		9BEF7A941C9A7D340090594C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BEF7A9F1C9BB1890090594C /* AccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 			children = (
 				9BEF7A6A1C9A622C0090594C /* AppBoardTests.swift */,
 				9BEF7A6C1C9A622C0090594C /* Info.plist */,
+				9BEF7A9F1C9BB1890090594C /* AccountTests.swift */,
 				9BEF7A801C9A684F0090594C /* BoardTests.swift */,
 			);
 			path = AppBoardTests;
@@ -479,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BEF7A811C9A684F0090594C /* BoardTests.swift in Sources */,
+				9BEF7AA01C9BB1890090594C /* AccountTests.swift in Sources */,
 				9BEF7A6B1C9A622C0090594C /* AppBoardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
