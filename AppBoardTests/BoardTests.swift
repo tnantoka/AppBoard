@@ -37,12 +37,15 @@ class BoardTests: XCTestCase {
         let account = Account()
         let board = Board()
         let app = App()
-        let name = "App Name"
-        app.name = name
+        let boardName = "Board Name"
+        board.name = boardName
+        let appName = "App Name"
+        app.name = appName
         account.addNewItem(board)
         board.addNewItem(app)
         XCTAssertEqual(board.apps.count, 1)
-        XCTAssertEqual(board.all.first?.name, name)
+        XCTAssertEqual(board.all.first?.name, appName)
+        XCTAssertEqual(app.board.name, boardName)
         
         board.deleteItemAtIndex(0)
         XCTAssertEqual(board.apps.count, 0)
