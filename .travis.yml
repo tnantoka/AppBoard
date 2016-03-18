@@ -5,7 +5,7 @@ matrix:
     - env: IOS="iPhone 6s,OS=9.2"
     - env: IOS="iPhone 6,OS=8.4"
 before_install:
-  - carthage bootstrap --platform iOS --no-use-binaries
+  - carthage bootstrap --platform iOS --no-use-binaries --verbose
 script:
   - set -o pipefail && xcodebuild test -project AppBoard.xcodeproj -scheme AppBoard -sdk iphonesimulator -destination "platform=iOS Simulator,name=$IOS" ONLY_ACTIVE_ARCH=NO | xcpretty
 after_success:
