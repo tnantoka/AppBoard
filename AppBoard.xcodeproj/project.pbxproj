@@ -40,6 +40,7 @@
 		9B11D4981C925149000D7DE9 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4971C925149000D7DE9 /* DataSource.swift */; };
 		9B11D49A1C925219000D7DE9 /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D4991C925219000D7DE9 /* SourceType.swift */; };
 		9B11D49E1C925630000D7DE9 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11D49D1C925630000D7DE9 /* DataType.swift */; };
+		9B70EE7A1C9EC66100AD9FB4 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70EE791C9EC66100AD9FB4 /* SearchTests.swift */; };
 		9BEF7A5B1C95AAC60090594C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7A5A1C95AAC60090594C /* APIError.swift */; };
 		9BEF7A5F1C95B47A0090594C /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7A5E1C95B47A0090594C /* AppViewController.swift */; };
 		9BEF7A611C95B48B0090594C /* AppViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEF7A601C95B48B0090594C /* AppViewController.storyboard */; };
@@ -121,6 +122,7 @@
 		9B11D4971C925149000D7DE9 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		9B11D4991C925219000D7DE9 /* SourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		9B11D49D1C925630000D7DE9 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		9B70EE791C9EC66100AD9FB4 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		9BEF7A5A1C95AAC60090594C /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		9BEF7A5E1C95B47A0090594C /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		9BEF7A601C95B48B0090594C /* AppViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppViewController.storyboard; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				9BEF7A6C1C9A622C0090594C /* Info.plist */,
 				9BEF7A9F1C9BB1890090594C /* AccountTests.swift */,
 				9BEF7A801C9A684F0090594C /* BoardTests.swift */,
+				9B70EE791C9EC66100AD9FB4 /* SearchTests.swift */,
 			);
 			path = AppBoardTests;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BEF7A811C9A684F0090594C /* BoardTests.swift in Sources */,
+				9B70EE7A1C9EC66100AD9FB4 /* SearchTests.swift in Sources */,
 				9BEF7AA01C9BB1890090594C /* AccountTests.swift in Sources */,
 				9BEF7A6B1C9A622C0090594C /* AppBoardTests.swift in Sources */,
 			);
