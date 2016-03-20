@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Symday
 
 class AppViewController: UIViewController {
 
@@ -28,8 +29,9 @@ class AppViewController: UIViewController {
                 iconView.image = UIImage(data: data)
         }
         nameLabel.text = app.name
-        releasedLabel.text = app.releasedAt.description
-        descView.text = app.desc        
+        releasedLabel.text = Symday().format(app.releasedAt)
+
+        descView.text = app.desc
         
         let filter = CIFilter(
             name: "CIQRCodeGenerator",

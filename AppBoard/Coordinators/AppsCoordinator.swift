@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Symday
 
 struct AppsCoordinator: Coordinator {
     
@@ -26,7 +27,7 @@ struct AppsCoordinator: Coordinator {
             editable: true,
             configureCell: { cell, app in
                 cell.textLabel?.text = app.name
-                cell.detailTextLabel?.text = app.releasedAt.description
+                cell.detailTextLabel?.text = Symday().format(app.releasedAt)
                 cell.imageView?.image = app.iconImage
             },
             selectItem: { app in
