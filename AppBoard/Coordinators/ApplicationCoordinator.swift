@@ -22,7 +22,13 @@ struct ApplicationCoordinator: Coordinator {
     }
 
     static func setAppearance() {
+        UILabel.appearance().textColor = UIColor(white: 0.0, alpha: 0.87)
+        UITextView.appearance().textColor = UILabel.appearance().textColor
+        
         UINavigationBar.appearance().tintColor = UIColor(red: 233.0 / 255.0, green: 30.0 / 255.0, blue: 99.0 / 255.0, alpha: 1.0) // #e91e63
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSForegroundColorAttributeName: UILabel.appearance().textColor
+        ]
     }
     
     func start() {

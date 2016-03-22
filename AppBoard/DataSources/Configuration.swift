@@ -58,6 +58,9 @@ class Configuration<Data: DataType>: DataSource<Data>, UITableViewDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier)
             ?? UITableViewCell(style: cellStyle, reuseIdentifier: reuseIdentifier)
         
+        cell.textLabel?.textColor = UILabel.appearance().textColor
+        cell.detailTextLabel?.textColor = UILabel.appearance().textColor
+
         let item = dataObject.itemAtPosition(indexPath.row)
         configureCell(cell: cell, item: item)
         
