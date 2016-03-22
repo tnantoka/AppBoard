@@ -1,5 +1,6 @@
 github "ikesyo/Himotoki" "1.7.0"
+github "tnantoka/QuickResponse" "v0.0.1"
 github "antitypical/Result" "1.0.2"
-github "tnantoka/Symday" "v0.0.2"
+github "tnantoka/Symday" "v0.0.3"
 github "realm/realm-cocoa" "v0.98.5"
 github "ishkawa/APIKit" "1.2.1"

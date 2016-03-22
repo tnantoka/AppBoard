@@ -8,6 +8,7 @@
 
 import UIKit
 import Symday
+import QuickResponse
 
 class AppViewController: UIViewController {
 
@@ -33,17 +34,7 @@ class AppViewController: UIViewController {
 
         descView.text = app.desc
         
-        let filter = CIFilter(
-            name: "CIQRCodeGenerator",
-            withInputParameters: [
-                "inputMessage": app.url.dataUsingEncoding(NSUTF8StringEncoding)!,
-                "inputCorrectionLevel": "H",
-            ]
-        )
-        let transform = CGAffineTransformMakeScale(8.0, 8.0)
-        let ciImage = filter!.outputImage!.imageByApplyingTransform(transform)
-        let qrImage = UIImage(CIImage: ciImage)
-        urlButton.setImage(qrImage, forState: .Normal)
+        urlButton.setImage(QuickResponse(message: app.url).scaled(8.0).code, forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {

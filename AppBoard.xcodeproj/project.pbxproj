@@ -43,6 +43,8 @@
 		9B70EE7A1C9EC66100AD9FB4 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70EE791C9EC66100AD9FB4 /* SearchTests.swift */; };
 		9B70EEB91C9EFF9000AD9FB4 /* Symday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B70EEB81C9EFF9000AD9FB4 /* Symday.framework */; };
 		9B70EEBA1C9EFFA100AD9FB4 /* Symday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B70EEB81C9EFF9000AD9FB4 /* Symday.framework */; };
+		9B70EEE41CA0DE8100AD9FB4 /* QuickResponse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B70EEE31CA0DE8100AD9FB4 /* QuickResponse.framework */; };
+		9B70EEE51CA0DE8D00AD9FB4 /* QuickResponse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B70EEE31CA0DE8100AD9FB4 /* QuickResponse.framework */; };
 		9BEF7A5B1C95AAC60090594C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7A5A1C95AAC60090594C /* APIError.swift */; };
 		9BEF7A5F1C95B47A0090594C /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7A5E1C95B47A0090594C /* AppViewController.swift */; };
 		9BEF7A611C95B48B0090594C /* AppViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEF7A601C95B48B0090594C /* AppViewController.storyboard */; };
@@ -126,6 +128,7 @@
 		9B11D49D1C925630000D7DE9 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		9B70EE791C9EC66100AD9FB4 /* SearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		9B70EEB81C9EFF9000AD9FB4 /* Symday.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Symday.framework; path = Carthage/Build/iOS/Symday.framework; sourceTree = "<group>"; };
+		9B70EEE31CA0DE8100AD9FB4 /* QuickResponse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickResponse.framework; path = Carthage/Build/iOS/QuickResponse.framework; sourceTree = "<group>"; };
 		9BEF7A5A1C95AAC60090594C /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		9BEF7A5E1C95B47A0090594C /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		9BEF7A601C95B48B0090594C /* AppViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppViewController.storyboard; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 				9B11D48A1C908070000D7DE9 /* Himotoki.framework in Frameworks */,
 				9B11D48B1C908070000D7DE9 /* Result.framework in Frameworks */,
 				9B70EEB91C9EFF9000AD9FB4 /* Symday.framework in Frameworks */,
+				9B70EEE41CA0DE8100AD9FB4 /* QuickResponse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +168,7 @@
 				9BEF7A851C9A7BCB0090594C /* RealmSwift.framework in Frameworks */,
 				9BEF7A861C9A7BCB0090594C /* Result.framework in Frameworks */,
 				9B70EEBA1C9EFFA100AD9FB4 /* Symday.framework in Frameworks */,
+				9B70EEE51CA0DE8D00AD9FB4 /* QuickResponse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +198,7 @@
 		9B11D4451C907071000D7DE9 = {
 			isa = PBXGroup;
 			children = (
+				9B70EEE31CA0DE8100AD9FB4 /* QuickResponse.framework */,
 				9B70EEB81C9EFF9000AD9FB4 /* Symday.framework */,
 				9B11D4861C908070000D7DE9 /* APIKit.framework */,
 				9B11D4871C908070000D7DE9 /* Himotoki.framework */,
@@ -443,6 +449,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Symday.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/QuickResponse.framework",
 			);
 			outputPaths = (
 			);
