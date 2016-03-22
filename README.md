@@ -20,6 +20,10 @@ $ carthage bootstrap --platform iOS
 $ open AppBoard.xcodeproj/
 ```
 
+## PRs Welcome
+
+I would like this app to be more **Swifty**. If you have any suggestions, please let me know with pull requests or issues. 
+
 ## Author
 
 [@tnantoka](https://twitter.com/tnantoka)
